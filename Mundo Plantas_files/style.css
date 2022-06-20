@@ -5,8 +5,8 @@ body {
 }
 
 ::selection{
-    color: rgb(255, 255, 255);
-    background-color: rgb(56, 48, 48) ;
+    color: rgb(0, 0, 0);
+    background-color: lightgray ;
 }
 .header{
     background-image: url(/fondo-plantas.jpg); /*no anda */
