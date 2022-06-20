@@ -73,6 +73,16 @@ body {
  
 }
 
+a{
+    color:antiquewhite;
+    text-decoration: none;
+}
+
+a:hover{
+    color:rgb(224, 168, 93);
+    text-decoration: underline;
+}
+
 .menu{
     background-color: darkolivegreen;
     flex-direction: column;
@@ -94,10 +104,6 @@ body {
     
 }
 
-li:hover{
-    color:rgb(224, 168, 93);
-    text-decoration: underline;
-}
 
 
 .titlesection{
