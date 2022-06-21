@@ -3,7 +3,8 @@ function saludar(){
 }
 
 let contador=0
-let inputValue = document.getElementById("contador");
+let inputValue
+
 function sumarClick(){
     contador++
     console.log(`Hiciste ${contador} clicks`)
@@ -11,8 +12,7 @@ function sumarClick(){
 }
 
 function resetearClick(){
-   for (contador; contador>0; contador--){
-   } 
+   contador=0
    console.log(`Hay ${contador} clicks`)
 }
 
@@ -25,8 +25,9 @@ function restarClick(){
     }
 }
 
-function contarClick(){ //NO ANDA. TIRA NULL
-    contador = contador+inputValue
-    alert(`Sumaste ${inputValue}. Ahora hay ${contador}`)
+function contarClick(){ 
+    inputValue = document.getElementById("contador").value;
+    contador = contador+Number(inputValue)
+    console.log(`Sumaste ${inputValue}. Ahora hay ${contador}`)
 }
 
