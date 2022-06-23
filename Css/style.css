@@ -1,6 +1,7 @@
 body {
     background-color: antiquewhite;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-bottom: 100px;
     
 }
 
@@ -33,7 +34,7 @@ body {
     margin-bottom: 0px;
 }
 
-.menu, .fondo, .footer{
+.menu, p span, .footer{
     background-color: darkolivegreen;
 }
 
@@ -75,7 +76,7 @@ body {
     justify-content:space-around;
 }
 
-a, .lista, .fondo, .footer{
+a, .lista, p span, .footer{
     color:antiquewhite;
 }
 
@@ -150,6 +151,57 @@ a:hover{
     font-style: italic;
 
 }
+
+.infoPersonal{
+    background-color: rgb(255, 255, 255);
+    height: auto;
+    width: 300px;
+    padding: 10px;
+    text-align: center;
+    border-style: solid;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.infoPersonal>p{
+    font-size:large;
+}
+.listaForm{
+    list-style: none;
+    text-align: left;
+}
+
+#mail{
+    margin-left: 33px;
+}
+
+.alerttext, #alertcheckbox, #alertinteres, #alertsubmit{
+    font-size: small;
+    color: red;
+    font-style: italic;
+}
+
+.borde{
+    border-radius: 5px;
+    border-width: 1px;
+    border-style: solid;
+    outline: none;
+}
+.bordegris{
+    border-radius: 5px;
+    border-color: grey;
+}
+
+.borderojo{
+    border-radius: 5px;
+    border-color: rgb(234, 12, 12);
+}
+
+.bordeverde{
+    border-radius: 5px;
+    border-color: rgb(21, 231, 31);
+}
+
 .footer{
     text-align: right;
     padding-top: 10px;
