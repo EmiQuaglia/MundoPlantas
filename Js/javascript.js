@@ -91,12 +91,12 @@ textName.addEventListener("input", validarName);
 textAdress.addEventListener("input", validarAdress);
 textMail.addEventListener("input", validarMail);
 textCheckbox.addEventListener("change", validarCheckbox);
-textInteres.addEventListener("change", validarInteres)
-validarFormulario();
+textInteres.addEventListener("change", validarInteres);
+submit.addEventListener("click",validarFormulario);
 
-let valueName= textName.value;
+let valueName
 function validarName(){
-    let valueName= textName.value;
+    valueName= textName.value;
     const caracteres = new RegExp('^[A-Z]+$', 'i')
     alertName.innerHTML=""
     if(!valueName){
@@ -116,9 +116,9 @@ function validarName(){
         infoName=true;
     }
 }
-
+let valueAdress
 function validarAdress(){
-    let valueAdress= textAdress.value;
+    valueAdress= textAdress.value;
     const caracteres = new RegExp('^[A-Z]+$', 'i')
     alertName.innerHTML=""
     if(!valueAdress){
@@ -139,9 +139,9 @@ function validarAdress(){
         infoAdress=true;
     }
 }
-
+let valueMail
 function validarMail(){
-    let valueMail= textMail.value;
+    valueMail= textMail.value;
     const bodymail= new RegExp(/^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i);
     alertMail.innerHTML="";
     if(!valueMail){
@@ -164,49 +164,39 @@ function validarMail(){
 }
 
 function validarCheckbox(){
-    let checked= textCheckbox.checked;
-    alertCheckbox.innerHTML=""
-    if (checked){
-        infoCheckbox=true;
-    } else {
-        infoCheckbox=false;
-    }
-
+    infoCheckbox= textCheckbox.checked 
 }
-let valueInteres = ""
+
+let valueInteres 
 function validarInteres(event){
     valueInteres = event.target.value
-    alertInteres.innerHTML= "Seleccione una opción"
-    if (valueInteres = ""){
+    if (valueInteres === ""){
         alertInteres.innerHTML= "No seleccionaste ninguna opcion"
         infoInteres=false;
     } else {
         alertInteres.innerHTML= "Genial"
-        infoAdress=true;
+        infoInteres=true;
     }
 }
-//No las toma porque están declaradas adentro de las funciones, si las saco no andan las funciones.
-const User = {
-    "nombre" : `${valueName}`,
-    "apellido" : `${valueAdress}`,
-    "mail": `${valueMail}`,
-    "notificar": `${infoCheckbox}`,
-    "interes" : `${valueInteres}`
+
+
+
+function validarFormulario(){
+    alertSubmit.innerHTML="Suscribite"
+    if ((infoName) && (infoAdress) && (infoMail) && (infoInteres)){
+        const user = {
+            nombre : valueName,
+            apellido : valueAdress,
+            mail: valueMail,
+            notificar: infoCheckbox,
+            interes : valueInteres,
+        }
+        console.log(user)
+        alertSubmit.innerHTML= "Tu suscripcion fue exitosa" 
+    } else {
+        alert("Completá todos los campos")
+    }
 }
-
-console.log(User);
-
-// function validarFormulario(){
-//     alertSubmit.innerHTML="Suscribite"
-//     if ((infoName) && (infoAdress) && (infoMail) && (infoCheckbox) && (infoInteres)){
-//         submit.removeAttribute("disable")
-//         alertSubmit.innerHTML= "Tu suscripcion fue exitosa"
-       
-//     } else {
-//         alertSubmit.innerHTML= "Completá todos los campos"
-//     }
-
-// }
 
 // function validarText(){
 //     let valueText= [textName.value, textAdress.value];
