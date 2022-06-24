@@ -1,6 +1,7 @@
 body {
     background-color: antiquewhite;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-bottom: 100px;
     
 }
 
@@ -8,34 +9,37 @@ body {
     color: rgb(255, 255, 255);
     background-color: rgb(56, 48, 48) ;
 }
+
+.header, .footer{
+    width: 100%;
+    position: fixed;
+    left: 0
+}
 .header{
-    background-image: url("fondo-plantas.jpg"); 
+    background-image: url("../assets/fondo-plantas.jpg"); 
     background-repeat: no-repeat;
     background-size: cover;
-    width:100%;
     height: 230px;
-    left: 0;
     top: 0;
-    position: fixed;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: lighter;
-    border-bottom-style:outset;
-    background-color: antiquewhite;
-   
-   
 }
 
+.titlesection, .title{
+    text-align: center;
+}
 
 .title{
     font-size: 80px;
-    text-align: center;
     margin-top: 50px;
     margin-bottom: 0px;
 }
 
-.plantas{
+.menu, p span, .footer{
+    background-color: darkolivegreen;
+}
+
+.plantas, .frasecelebre{
     color: darkolivegreen;
-    font-size: 80px;
 }
 
 .subtitle{
@@ -45,23 +49,22 @@ body {
     margin-bottom: 0px;
     font-style: italic;
 }
+
 .flex-container{
     display: flex;
     margin-top: 0px;
     flex-direction: row;
     justify-content: flex-end;
     align-items: center;
-
 }
 
 .bottom{
     height: 30px;
     width: 30px;
     margin: 10px;
-
 }
 
-.textrrss{
+.textrrss, .content{
     align-items: center;
 }
 
@@ -71,48 +74,40 @@ body {
     padding-top: 80px;
     display: flex;
     justify-content:space-around;
-    align-items: center;
- 
+}
+
+a, .lista, p span, .footer{
+    color:antiquewhite;
 }
 
 a{
-    color:antiquewhite;
     text-decoration: none;
 }
-
 a:hover{
     color:rgb(224, 168, 93);
     text-decoration: underline;
 }
 
 .menu{
-    background-color: darkolivegreen;
     flex-direction: column;
     width: 300px;
     height: 500px;
     margin: 10px;
     border-style: double;
-    
-
 }
 
 .lista{
     padding-left: 28px;
-    text-align: center;
     font-size: 30px;
     list-style: none;
     text-align:left;
-    color:antiquewhite
-    
 }
 
-
-
 .titlesection{
-    text-align: center;
     text-decoration: underline;
     font-size: 25px;
 }
+
 .info{
     width: 400px;
     height: 460px;
@@ -122,11 +117,6 @@ a:hover{
     padding: 20px;
     text-justify:distribute;
     
-}
-
-.fondo{
-    background-color: darkolivegreen;
-    color:antiquewhite
 }
 
 .gif{
@@ -141,13 +131,11 @@ a:hover{
    height: 200px;
    text-align: center;
    background-color: rgb(255, 176, 72);
-   color: darkolivegreen;
    margin-left: auto;
    margin-right: auto;
    margin-top: 80px;
    margin-bottom: 80px;
    padding: 10px;
-  
 }
 
 .frase{
@@ -163,19 +151,64 @@ a:hover{
     font-style: italic;
 
 }
+
+.infoPersonal{
+    background-color: rgb(255, 255, 255);
+    height: auto;
+    width: 300px;
+    padding: 10px;
+    text-align: center;
+    border-style: solid;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.infoPersonal>p{
+    font-size:large;
+}
+.listaForm{
+    list-style: none;
+    text-align: left;
+}
+
+#mail{
+    margin-left: 33px;
+}
+
+.alerttext, #alertcheckbox, #alertinteres, #alertsubmit{
+    font-size: small;
+    color: red;
+    font-style: italic;
+}
+
+.borde{
+    border-radius: 5px;
+    border-width: 1px;
+    border-style: solid;
+    outline: none;
+}
+.bordegris{
+    border-radius: 5px;
+    border-color: grey;
+}
+
+.borderojo{
+    border-radius: 5px;
+    border-color: rgb(234, 12, 12);
+}
+
+.bordeverde{
+    border-radius: 5px;
+    border-color: rgb(21, 231, 31);
+}
+
 .footer{
-    background-color: darkolivegreen;
     text-align: right;
     padding-top: 10px;
     padding-right: 10px;
     font-size: 10px;
-    color:antiquewhite;
     margin-bottom: 0px;
     vertical-align: bottom;
     bottom: 0;
-    width: 100%;
     height: 40px;
-    left: 0;
-    position: fixed;
-
 }
